@@ -12,7 +12,6 @@ public interface PostagemRepository extends JpaRepository <Postagem, Long> {
 	
 	public List<Postagem> findAllByTituloContainingIgnoreCase(String titulo); 
 
-	
 	@Query (value = "select * from postagem where ano >2011", nativeQuery = true)
 	List<Postagem> findyAllMaior();
 	
@@ -24,4 +23,5 @@ public interface PostagemRepository extends JpaRepository <Postagem, Long> {
 	
 	@Query (value = "select * from postagem where ano >=2011 and ano <=2013", nativeQuery = true)
 	List<Postagem> anosIntervalos();
+	
  }
